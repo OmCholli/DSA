@@ -39,6 +39,9 @@ public class QueueProgram {
 	 else {
 		 int value=queue[bottom];
 		 bottom++;
+		 if(top>bottom) {
+			 top=bottom=-1;
+		 }
 	System.out.println("the value fetched is "+value);
 }
  
@@ -49,7 +52,9 @@ public class QueueProgram {
 	 }
 	 else {
 		 System.out.println("The Peek element is "+ queue[bottom]);
+		
 	 }
+	 
 
  }
  public void delete() {
@@ -67,8 +72,13 @@ public class QueueProgram {
 	queue.dequeue();
 	queue.dequeue();
 	queue.dequeue();
-	queue.enqueue(40);
+	queue.enqueue(10);
+	queue.enqueue(60);
+	queue.enqueue(50);
+	queue.enqueue(60);
 	queue.peek();
 }
 }
+
+
 
